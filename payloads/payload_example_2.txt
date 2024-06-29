@@ -1,0 +1,3 @@
+REM This is a comment and will not run
+STRING hello opening messages here
+DELAY 200

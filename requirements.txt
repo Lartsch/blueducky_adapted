@@ -1,0 +1,10 @@
+dbus-python
+PyBluez
+pycairo
+pydbus
+PyGObject
+pyobjc
+pybluez
+setuptools
+loguru
+art

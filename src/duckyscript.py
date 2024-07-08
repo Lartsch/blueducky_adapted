@@ -124,6 +124,12 @@ def process_duckyscript(client, duckyscript, current_line=0, current_position=0)
                     logger.warning(f"Invalid combination format: {line}")
             elif line.startswith("ENTER"):
                 client.send_keypress(KeyCodes.ENTER)
+            elif line.startswith("PRINTSCREEN"):
+                client.send_keypress(KeyCodes.PRINTSCREEN)
+            elif line.startswith("DOWN"):
+                client.send_keypress(KeyCodes.DOWN)
+            elif line.startswith("LEFT"):
+                client.send_keypress(KeyCodes.LEFT)
             current_position = 0
             current_line += 1
 

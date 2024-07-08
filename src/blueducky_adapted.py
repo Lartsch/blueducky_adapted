@@ -35,6 +35,7 @@ def main():
             return
 
         duckyscript = read_duckyscript(scriptfile)
+        print(f"Selected payload: {scriptfile}")
         if not duckyscript:
             logger.info("Payload file not found. Exiting.")
             return

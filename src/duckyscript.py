@@ -86,6 +86,8 @@ def process_duckyscript(client, duckyscript, current_line=0, current_position=0)
                             client.send_keypress(KeyCodes.MINUS)
                         elif char == "=":
                             client.send_keypress(KeyCodes.EQUAL)
+                        elif char == "@":
+                            client.send_keypress(ModifierCodes.SHIFT, KeyCodes._2)
                         elif char in shift_required_characters:
                             key_code_str = char_to_key_code(char)
                             if key_code_str:
@@ -111,7 +113,7 @@ def process_duckyscript(client, duckyscript, current_line=0, current_position=0)
                     except AttributeError as e:
                         logger.warning(f"Attribute error: {e} - Unsupported character '{char}' in Duckyscript")
 
-            elif any(mod in line for mod in ["SHIFT", "ALT", "CTRL", "GUI", "COMMAND", "WINDOWS"]):
+            elif any(mod in line for mod in ["SHIFT", "ALT", "CTRL", "GUI", "COMMAND", "WINDOWS", "RIGHTALT"]):
                 components = line.split()
                 if len(components) == 2:
                     modifier, key = components

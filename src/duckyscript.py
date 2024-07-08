@@ -115,7 +115,7 @@ def process_duckyscript(client, duckyscript, current_line=0, current_position=0)
                     modifier, key = components
                     try:
                         modifier_enum = getattr(ModifierCodes, modifier.upper())
-                        key_enum = getattr(KeyCodes, key.lower())
+                        key_enum = getattr(KeyCodes, key)
                         client.send_keyboard_combination(modifier_enum, key_enum)
                         logger.info(f"Sent combination: {line}")
                     except AttributeError:

@@ -3,7 +3,7 @@ import sys
 
 from loguru import logger
 
-TITLE = "BluePop"
+TITLE = "BlueDucky Adapted"
 VERSION = "v0.1"
 
 

@@ -9,7 +9,7 @@ from config import TITLE
 
 
 def get_target_address():
-    print(f"\n What is the target address? Leave blank and we will scan for you!")
+    print(f"\n What is the target address? Leave blank for scanning.")
     target_address = input(f"\n > ")
 
     if target_address == "":

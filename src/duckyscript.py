@@ -25,6 +25,7 @@ def process_duckyscript(client, duckyscript, current_line=0, current_position=0)
             line = line.strip()
             logger.info(f"Processing {line}")
             if not line or line.startswith("REM"):
+                current_line += 1
                 continue
             if line.startswith("TAB"):
                 client.send_keypress(KeyCodes.TAB)
@@ -53,6 +54,7 @@ def process_duckyscript(client, duckyscript, current_line=0, current_position=0)
                     logger.error(f"Invalid DELAY format in line: {line}")
                 except IndexError:
                     logger.error(f"DELAY command requires a time parameter in line: {line}")
+                current_line += 1
                 continue
             if line.startswith("STRING"):
                 text = line[7:]

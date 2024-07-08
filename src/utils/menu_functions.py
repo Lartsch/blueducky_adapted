@@ -92,9 +92,7 @@ def scan_for_devices():
 
 def main_menu():
     clear_screen()
-    tprint(TITLE, font='wetletter')
-    print('Made by Information Security Club <3')
-
+    tprint(TITLE, font='big')
 
 def is_valid_mac_address(mac_address):
     mac_address_pattern = re.compile(r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$')

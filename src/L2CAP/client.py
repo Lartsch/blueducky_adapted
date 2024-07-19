@@ -124,11 +124,3 @@ class L2CAPClient:
             self.send(self.encode_keyboard_input())
         time.sleep(delay)
         return True
-
-    def send_keyboard_combination(self, modifier, key, delay: float = 0.004) -> None:
-        press_report = self.encode_keyboard_input(modifier, key)
-        self.send(press_report)
-        time.sleep(delay)
-        release_report = self.encode_keyboard_input()
-        self.send(release_report)
-        time.sleep(delay)

@@ -84,9 +84,9 @@ def main():
             break
 
         except ReconnectionRequiredException as e:
-            logger.info(f"Reconnection required. Attempting to reconnect...")
             current_line = e.current_line
             current_position = e.current_position
+            logger.info(f"Reconnection required. Attempting to reconnect at line " + str(current_line) + "...")
             connection_manager.close_all()
             time.sleep(2)
 
